@@ -127,7 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Book.cpp" />
     <ClCompile Include="Heresy.cpp" />
+    <ClCompile Include="InGameCurrency.cpp" />
+    <ClCompile Include="MyHuman.cpp" />
+    <ClCompile Include="Phone.cpp" />
+    <ClCompile Include="Room.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Book.h" />
+    <ClInclude Include="InGameCurrency.h" />
+    <ClInclude Include="MyHuman.h" />
+    <ClInclude Include="Phone.h" />
+    <ClInclude Include="Room.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
