@@ -1,10 +1,7 @@
 #pragma once
-
 #include <string>       // std::string
 #include <iostream>     // std::cout
 using namespace std;
-
-
 class Room {
 private:
     string room_type = "Спальня";
@@ -34,8 +31,13 @@ public:
     void setOwner(int owner);
     int getOwner() const;
     //GET/SET END
+    Room(string room_type);
+    Room(string room_type, int doors);
+    Room(string room_type, int doors, int windows);
+    Room(Room& t);
     Room();
-    Room(string room_type, int doors = 1, int windows = 1, bool lead_outside = true, int sqaremeters = 9, int owner = -1);
+    ~Room();
+    //Room(string room_type, int doors = 1, int windows = 1, bool lead_outside = true, int sqaremeters = 9, int owner = -1);
     //
 
     void wallInTheDoor();

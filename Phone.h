@@ -34,8 +34,13 @@ public:
     //SET/GET end
     //Constructor
 
-    Phone(string manufacturer, string model, string OS = "Android", string OSVersion = "12.0", string number = "+3800000000000", int ownerId = -1);
+    //Phone(string manufacturer, string model, string OS = "Android", string OSVersion = "12.0", string number = "+3800000000000", int ownerId = -1);
+    Phone(string manufacturer);
+    Phone(string manufacturer, string model);
+    Phone(string manufacturer, string model, string OS);
     Phone();
+    Phone(Phone& t);
+    ~Phone();
 
     //END Constructor
     void installOS(string Name);

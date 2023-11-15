@@ -62,21 +62,37 @@ int Human::getPersonalIdNumber() const
 //Construct
 Human::Human()
 {
-    Human::setName("Ivan");
-    Human::setLastName("Ivanov");
-    Human::setAge(18);
-    Human::setJob("");
-    Human::setGrade(-1);
-    Human::setPersonalIdNumber(-1);
+    this->setName("Ivan");
+    this->setLastName("Ivanov");
+    this->setAge(18);
+    this->setJob("");
+    this->setGrade(-1);
+    this->setPersonalIdNumber(-1);
 }
-Human::Human(string name, string lastname, int age, string job, int grade, int personalIdNumber)
+Human::Human(string name) : Human()
 {
-    Human::setName(name);
-    Human::setLastName(lastname);
-    Human::setAge(age);
-    Human::setJob(job);
-    Human::setGrade(-1);
-    Human::setPersonalIdNumber(personalIdNumber);
+    this->setName(name);
+}
+Human::Human(string name, string lastname) : Human(name)
+{
+    this->setLastName(lastname);
+}
+Human::Human(string name, string lastname, int age) : Human(name, lastname)
+{
+    this->setAge(age);
+}
+Human::Human(Human& t)
+{
+    this->setName(t.getName());
+    this->setLastName(t.getLastName());
+    this->setAge(t.getAge());
+    this->setJob(t.getJob());
+    this->setGrade(t.getGrade());
+    this->setPersonalIdNumber(t.getPersonalIdNumber());
+}
+Human::~Human()
+{
+
 }
 //END Construct
 void Human::setFullName(std::string FullName)

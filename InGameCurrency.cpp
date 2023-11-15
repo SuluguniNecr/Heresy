@@ -68,7 +68,7 @@ void InGameCurrency::setPlayerCredential(string playerCredential)
 //GET/SET End
 
 //Constructor
-InGameCurrency::InGameCurrency(int copper, int silver, int gold, int commendations, int crystals, string playerCredential)
+/*InGameCurrency::InGameCurrency(int copper, int silver, int gold, int commendations, int crystals, string playerCredential)
 {
     InGameCurrency::setCopper(copper);
     InGameCurrency::setSilver(silver);
@@ -76,6 +76,18 @@ InGameCurrency::InGameCurrency(int copper, int silver, int gold, int commendatio
     InGameCurrency::setCommendations(commendations);
     InGameCurrency::setCrystals(crystals);
     InGameCurrency::setPlayerCredential(playerCredential);
+}*/
+InGameCurrency::InGameCurrency(int copper) : InGameCurrency()
+{
+    InGameCurrency::setCopper(copper);
+}
+InGameCurrency::InGameCurrency(int copper, int silver) : InGameCurrency(copper)
+{
+    InGameCurrency::setSilver(silver);
+}
+InGameCurrency::InGameCurrency(int copper, int silver, int gold) : InGameCurrency(copper, silver)
+{
+    InGameCurrency::setGold(gold);
 }
 
 InGameCurrency::InGameCurrency()
@@ -86,6 +98,22 @@ InGameCurrency::InGameCurrency()
     InGameCurrency::setCommendations(0);
     InGameCurrency::setCrystals(0);
     InGameCurrency::setPlayerCredential("-1");
+}
+
+InGameCurrency::InGameCurrency(InGameCurrency& t)
+{
+    InGameCurrency::setCopper(t.getCopper());
+    InGameCurrency::setSilver(t.getSilver());
+    InGameCurrency::setGold(t.getGold());
+    InGameCurrency::setCommendations(t.getCommendations());
+    InGameCurrency::setCrystals(t.getCrystals());
+    InGameCurrency::setPlayerCredential(t.getPlayerCredential());
+}
+
+
+InGameCurrency::~InGameCurrency()
+{
+
 }
 //END Constructor
 

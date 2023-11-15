@@ -13,19 +13,19 @@ int main()
     std::cout << "Hello World!\n";
 
     Human* MainCharacter = new Human();
-    Human* Deuteragonist = new Human("Helel", "Venus", 22, "Guardian", 10, 1996);
+    Human* Deuteragonist = new Human("Helel", "Venus", 22);
 
     Book* RentedBook = new Book();
-    Book* ReservedBook = new Book("Иллиада", "Гомер", 0, "Эпос", -1);
+    Book* ReservedBook = new Book("Иллиада", "Гомер", 0);
 
     InGameCurrency* GameProgress = new InGameCurrency();
-    InGameCurrency* AltAccount = new InGameCurrency(50, 50, 20, 75, 7000, "+380777777777");
+    InGameCurrency* AltAccount = new InGameCurrency(50, 50, 20);
 
     Phone* CellPhone = new Phone();
-    Phone* WorkPhone = new Phone("Apple", "i14", "iOS", "12.0", "+380777777777", -1);
+    Phone* WorkPhone = new Phone("Apple", "i14", "iOS");
 
     Room* RentedRoom = new Room();
-    Room* DesiredRoom = new Room("Bedroom", 1, 2, false, 16);
+    Room* DesiredRoom = new Room("Bedroom", 1, 2);
 
 
     MainCharacter->assignID();

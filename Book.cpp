@@ -54,22 +54,40 @@ int Book::getCustomerId()
 
 //Constructor
 
-Book::Book(string name, string author, int year, string genre, int customerid)
+Book::Book(string name) : Book::Book()
 {
-    Book::setName(name);
-    Book::setAuthor(author);
-    Book::setYear(year);
-    Book::setGenre(genre);
-    Book::setCustomerId(customerid);
+    this->setName(name);
+}
+
+Book::Book(string name, string author) : Book::Book(name)
+{
+    this->setAuthor(author);
+}
+
+Book::Book(string name, string author, int year) : Book::Book(name, author)
+{
+    this->setYear(year);
 }
 
 Book::Book()
 {
-    Book::setName("Идиот");
-    Book::setAuthor("Достоевский");
-    Book::setYear(1869);
-    Book::setGenre("Роман");
-    Book::setCustomerId(-1);
+    this->setName("Идиот");
+    this->setAuthor("Достоевский");
+    this->setYear(1869);
+    this->setGenre("Роман");
+    this->setCustomerId(-1);
+}
+Book::Book(Book& t)
+{
+    this->setName(t.getName());
+    this->setAuthor(t.getAuthor());
+    this->setYear(t.getYear());
+    this->setGenre(t.getGenre());
+    this->setCustomerId(t.getCustomerId());
+}
+Book::~Book()
+{
+
 }
 
 //EMD Constructor

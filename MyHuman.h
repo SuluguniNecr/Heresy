@@ -34,8 +34,14 @@ public:
     int getPersonalIdNumber() const;
     //END GET/SET
     //Constuct
+    Human(string name);
+    Human(string name, string lastname);
+    Human(string name, string lastname, int age);
+
     Human();
-    Human(string name, string lastname = "", int age = 18, string job = "", int grade = 1, int personalIdNumber = -1);
+    Human(Human& t);
+    ~Human();
+    //Human(string name, string lastname = "", int age = 18, string job = "", int grade = 1, int personalIdNumber = -1) ;
     //END Construct
     void setFullName(std::string FullName);
 

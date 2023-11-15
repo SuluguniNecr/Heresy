@@ -36,9 +36,14 @@ public:
     //GET/SET End
 
     //Constructor
-    InGameCurrency(int copper, int silver = 0, int gold = 0, int commendations = 0, int crystals = 0, string playerCredential = "-1");
+    //InGameCurrency(int copper, int silver = 0, int gold = 0, int commendations = 0, int crystals = 0, string playerCredential = "-1");
+    InGameCurrency(int copper);
+    InGameCurrency(int copper, int silver);
+    InGameCurrency(int copper, int silver, int gold);
 
     InGameCurrency();
+    InGameCurrency(InGameCurrency& t);
+    ~InGameCurrency();
     //END Constructor
 
     void recalculate();

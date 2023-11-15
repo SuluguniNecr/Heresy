@@ -34,9 +34,13 @@ public:
 
     //Constructor
 
-    Book(string name, string author = "", int year = 1970, string genre = "", int customerid = -1);
+    Book(string name);
+    Book(string name, string author);
+    Book(string name, string author, int year);
 
     Book();
+    ~Book();
+    Book(Book& t);
 
     //EMD Constructor
 

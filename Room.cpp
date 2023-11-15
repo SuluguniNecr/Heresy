@@ -64,21 +64,41 @@ int Room::getOwner() const
 //Constructor
 Room::Room()
 {
-    Room::setRoomType("Hallway");
-    Room::setDoors(1);
-    Room::setWindows(2);
-    Room::setLeadOutside(true);
-    Room::setSquareMeters(9);
-    Room::changeOwner(-1);
+    this->setRoomType("Hallway");
+    this->setDoors(1);
+    this->setWindows(2);
+    this->setLeadOutside(true);
+    this->setSquareMeters(9);
+    this->changeOwner(-1);
 }
-Room::Room(string room_type, int doors, int windows, bool lead_outside, int sqaremeters, int owner)
+
+Room::Room(string room_type) : Room()
 {
-    Room::setRoomType(room_type);
-    Room::setDoors(doors);
-    Room::setWindows(windows);
-    Room::setLeadOutside(lead_outside);
-    Room::setSquareMeters(sqaremeters);
-    Room::changeOwner(owner);
+    this->setRoomType(room_type);
+}
+
+Room::Room(string room_type, int doors) : Room(room_type)
+{
+    this->setDoors(doors);
+}
+Room::Room(string room_type, int doors, int windows) : Room(room_type, doors)
+{
+    this->setWindows(windows);
+}
+
+Room::Room(Room& t)
+{
+    this->setRoomType(t.getRoomType());
+    this->setDoors(t.getDoors());
+    this->setWindows(t.getWindows());
+    this->setLeadOutside(t.getLeadOutside());
+    this->setSquareMeters(t.getSquareMeters());
+    this->changeOwner(t.getOwner());
+}
+
+Room::~Room()
+{
+
 }
 //END Constructor
 

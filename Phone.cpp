@@ -59,14 +59,29 @@ int Phone::getOwnerId() const
 
 //Constructor
 
-Phone::Phone(string manufacturer, string model, string OS, string OSVersion, string number, int ownerId)
+Phone::Phone(string manufacturer) : Phone()
 {
     Phone::setManufacturer(manufacturer);
+}
+
+Phone::Phone(string manufacturer, string model) : Phone(manufacturer)
+{
     Phone::setModel(model);
+}
+
+Phone::Phone(string manufacturer, string model, string OS) : Phone(manufacturer, model)
+{
     Phone::setOS(OS);
-    Phone::setOSVersion(OSVersion);
-    Phone::setNumber(number);
-    Phone::setOwnerId(ownerId);
+}
+
+Phone::Phone(Phone& t)
+{
+    Phone::setManufacturer(t.getManufacturer());
+    Phone::setModel(t.getModel());
+    Phone::setOS(t.getOS());
+    Phone::setOSVersion(t.getOSVersion());
+    Phone::setNumber(t.getNumber());
+    Phone::setOwnerId(t.getOwnerId());
 }
 
 Phone::Phone()
@@ -77,6 +92,10 @@ Phone::Phone()
     Phone::setOSVersion("12.0");
     Phone::setNumber("+3800000000000");
     Phone::setOwnerId(-1);
+}
+Phone::~Phone()
+{
+
 }
 
 //END Constructor
