@@ -10,33 +10,40 @@ using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    //std::cout << "Hello World!\n";
+    // OLD CODE Legacy Task #1
+    //
+    //Human* MainCharacter = new Human();
+    //Human* Deuteragonist = new Human("Helel", "Venus", 22);
 
-    Human* MainCharacter = new Human();
-    Human* Deuteragonist = new Human("Helel", "Venus", 22);
+    //Book* RentedBook = new Book();
+    //Book* ReservedBook = new Book("Иллиада", "Гомер", 0);
 
-    Book* RentedBook = new Book();
-    Book* ReservedBook = new Book("Иллиада", "Гомер", 0);
-
-    InGameCurrency* GameProgress = new InGameCurrency();
-    InGameCurrency* AltAccount = new InGameCurrency(50, 50, 20);
-
-    Phone* CellPhone = new Phone();
-    Phone* WorkPhone = new Phone("Apple", "i14", "iOS");
-
-    Room* RentedRoom = new Room();
-    Room* DesiredRoom = new Room("Bedroom", 1, 2);
+    //InGameCurrency* GameProgress = new InGameCurrency();
+    //InGameCurrency* AltAccount = new InGameCurrency(50,50,20);
+    //
+    //Phone* CellPhone = new Phone();
+    //Phone* WorkPhone = new Phone("Apple", "i14", "iOS");
+    //
+    //Room* RentedRoom = new Room();
+    //Room* DesiredRoom = new Room("Bedroom", 1, 2);
 
 
-    MainCharacter->assignID();
-    //Borrow a book from library
-    RentedBook->giveOutBook(MainCharacter->getPersonalIdNumber());
-    //Register new phone with pre-installed SIM
-    CellPhone->personRegistration(MainCharacter->getPersonalIdNumber());
-    //Register in mobile game via Phone Number
-    GameProgress->assignPlayer(CellPhone->getNumber());
-    //Rent a Room
-    RentedRoom->changeOwner(MainCharacter->getPersonalIdNumber());
+    //MainCharacter->assignID();
+    ////Borrow a book from library
+    //RentedBook->giveOutBook(MainCharacter->getPersonalIdNumber());
+    ////Register new phone with pre-installed SIM
+    //CellPhone->personRegistration(MainCharacter->getPersonalIdNumber());
+    ////Register in mobile game via Phone Number
+    //GameProgress->assignPlayer(CellPhone->getNumber());
+    ////Rent a Room
+    //RentedRoom->changeOwner(MainCharacter->getPersonalIdNumber());
+
+    // END OLD CODE Legacy Task #1
+
+
+
+
     system("pause");
 }
 

@@ -128,6 +128,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
+    <ClCompile Include="DateTime.cpp" />
+    <ClCompile Include="Group.cpp" />
     <ClCompile Include="Heresy.cpp" />
     <ClCompile Include="InGameCurrency.cpp" />
     <ClCompile Include="MyHuman.cpp" />
@@ -137,6 +139,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h" />
+    <ClInclude Include="DateTime.h" />
+    <ClInclude Include="Group.h" />
     <ClInclude Include="InGameCurrency.h" />
     <ClInclude Include="MyHuman.h" />
     <ClInclude Include="Phone.h" />
